@@ -9,5 +9,20 @@ The purpose of this application is to build the understanding and familiarity on
 * Babel
 * Webpack
 * React
+* Enzyme
+* Chai
+* Mocha
 
 ## Usage(s)
+
+Run the application
+
+```
+npm start
+```
+
+Run automated tests
+
+```
+npm test
+```
