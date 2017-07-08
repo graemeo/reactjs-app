@@ -4,6 +4,7 @@
   "description": "Sample ReactJS app based on various online tutorials",
   "main": "index.js",
   "scripts": {
+    "test": "mocha",
     "start": "webpack-dev-server --hot"
   },
   "author": "",
@@ -17,5 +18,8 @@
     "react-dom": "^15.6.1",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.5.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.4.2"
   }
 }
