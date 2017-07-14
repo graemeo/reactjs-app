@@ -1,9 +1,6 @@
 
-stage "Build" {
+stage('Build') {
    echo "Hello World!"
-
-   node("") {
-   }
 }
 
 
