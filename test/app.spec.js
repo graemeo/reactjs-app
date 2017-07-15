@@ -6,6 +6,6 @@ import App from '../App';
 describe("App", function() {
    it("should display Hello World", function() {
      const wrapper = shallow(<App/>);
-     expect(wrapper.contains(<div>Hello World!!!</div>)).to.equal(true);
+     expect(wrapper.contains('Hello World!!!')).to.equal(true);
    });
 });
