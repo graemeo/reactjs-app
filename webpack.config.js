@@ -1,8 +1,11 @@
+const path = require('path');
+
 var config = {
    entry: './main.js',
    
    output: {
-      filename: 'index.js'
+      filename: 'index.js',
+      path: path.resolve(__dirname, './dist')
    },
    
    devServer: {
