@@ -10,7 +10,7 @@ describe('About', function() {
       expect(wrapper.contains(<legend>About Yourself</legend>)).to.equal(true);
    });
 
-   it('should find Name input field node', function() {
+   it('should find name input field node', function() {
       const wrapper = shallow(<About />);
  
       expect(wrapper.find('#name').length).to.equal(1);
