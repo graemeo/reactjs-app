@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Greeter from './Greeter.jsx';
 
 class About extends React.Component {
    constructor(props) {
@@ -20,10 +20,13 @@ class About extends React.Component {
 
    render() {
       return(
+         <div>
          <fieldset>
             <legend>About Yourself</legend>
             <input type='text' id='name' name='name' value={this.state.name} onChange={this.handleChange} />
          </fieldset>
+         <Greeter name={this.state.name} />
+         </div>
       );
    }
 }
