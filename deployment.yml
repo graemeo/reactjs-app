@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Add host
+    add_host: 
+       hostname: "{{host}}" 
+       groups: my_host
+       ansible_user: vagrant
+       ansible_ssh_private_key_file: "{{ssh_identity}}"
+  - name: Test output
+    command: echo 'hello world'
+
+- hosts: my_host
+  tasks:
+  - name: Create apps directory
+    file:
+       path: apps
+       state: directory
