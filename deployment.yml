@@ -5,7 +5,7 @@
     add_host: 
        hostname: "{{host}}" 
        groups: my_host
-       ansible_user: vagrant
+       ansible_user: "{{user}}"
        ansible_ssh_private_key_file: "{{ssh_identity}}"
   - name: Test output
     command: echo 'hello world'

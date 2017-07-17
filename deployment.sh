@@ -1,2 +1,2 @@
 
-ansible-playbook deployment.yml --extra-vars "host=172.28.128.3 ssh_identity='/Users/graemeong/.ssh/id_rsa'"
+ansible-playbook deployment.yml --extra-vars "host=$HOST user=$USER ssh_identity='$SSH_IDENTITY'" -vvv
