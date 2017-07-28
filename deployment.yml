@@ -16,3 +16,5 @@
     file:
        path: apps
        state: directory
+  roles:
+  - ansible-role-install-apache
