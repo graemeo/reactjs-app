@@ -1,4 +1,4 @@
 ---
-- src: https://github.com/graemeo/ansible-role-install-apache.git
+- src: https://github.com/graemeo/ansible-role-apache-install.git
   version: v1.1.1
   scm: git
