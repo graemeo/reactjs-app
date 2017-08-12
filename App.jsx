@@ -1,7 +1,7 @@
 import React from 'react';
 import About from './components/About.jsx';
 import Greeter from './components/Greeter.jsx';
-import request from 'request';
+import {getPokemons} from './services/pokemon-service';
 
 class App extends React.Component {
    constructor(props) {
@@ -14,12 +14,12 @@ class App extends React.Component {
 
    componentDidMount() {
       var self = this;
-
-      request('http://www.pokeapi.co/api/v2/pokemon', function(error, response, body) {
-         self.setState({
-            pokemons: body
-         });
-      });
+      getPokemons()
+         .then(function(result) {
+             self.setState({
+                pokemons: result
+             });
+          });
    }
 
    render() {
