@@ -1,0 +1,7 @@
+{
+   "pokemon": {
+      "api": {
+         "url": "http://www.pokeapi.co"
+      }
+   }
+}

@@ -2,3 +2,4 @@ node_modules
 dist
 *.retry
 roles
+config/client.json

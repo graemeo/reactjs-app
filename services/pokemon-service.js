@@ -1,7 +1,10 @@
 import request from 'request-promise';
+import config from 'config';
 
 export function getPokemons() {
-   return request('http://www.pokeapi.co/api/v2/pokemon')
+   var url = config.pokemon.api.url;
+   
+   return request(url + '/api/v2/pokemon')
       .then(function(resp) {
          return resp;
       })

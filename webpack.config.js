@@ -1,6 +1,10 @@
 const path = require('path');
+const config = require('config');
+const fs = require('fs');
 
-var config = {
+fs.writeFileSync(path.resolve(__dirname, 'config/client.json'), JSON.stringify(config))
+
+var configuration = {
    entry: './main.js',
    
    output: {
@@ -33,7 +37,13 @@ var config = {
       fs: 'empty',
       net: 'empty',
       tls: 'empty'
+  },
+
+  resolve: {
+     alias: {
+        config: path.resolve(__dirname, 'config/client.json')
+     }
   }
 }
 
-module.exports = config;
+module.exports = configuration;
