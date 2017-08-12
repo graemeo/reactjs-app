@@ -1,7 +1,7 @@
 import React from 'react';
 import {mount, shallow, render} from 'enzyme';
 import {expect} from 'chai';
-import Greeter from '../Greeter.jsx';
+import Greeter from '../components/Greeter.jsx';
 
 describe('Greeter', function() {
    it('should display greeting with name when name is provided', function() {

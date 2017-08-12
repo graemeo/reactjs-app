@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai';
 import { shallow, mount, render } from 'enzyme';
-import About from '../About';
+import About from '../components/About';
 
 describe('About', function() {
    it('should display About Yourself in fieldset', function() {
