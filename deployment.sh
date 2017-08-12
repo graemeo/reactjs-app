@@ -44,4 +44,4 @@ then
 fi
 
 ansible-galaxy install -r requirements.yml -p ./roles $force -v
-#ansible-playbook deployment.yml --extra-vars "host=$host user=$user ssh_identity='$identity'" -vvv
+ansible-playbook deployment.yml --extra-vars "host=$host user=$user ssh_identity='$identity'" -vvv
