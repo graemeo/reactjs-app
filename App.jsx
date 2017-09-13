@@ -8,7 +8,10 @@ class App extends React.Component {
       super(props);
 
       this.state = {
-         pokemons: []
+         pokemons: {
+            count: '',
+            list: []
+         }
       };
    }
 
@@ -17,7 +20,10 @@ class App extends React.Component {
       getPokemons()
          .then(function(result) {
              self.setState({
-                pokemons: result
+                pokemons: {
+                   count: result.count,
+                   list: result.results
+                }
              });
           });
    }
@@ -25,7 +31,10 @@ class App extends React.Component {
    render() {
       return (
          <div>
-            <div>{this.state.pokemons}</div>
+            {this.state.pokemons.list.map((pokemon, index) =>
+               <li key={index}>{pokemon.name}</li>
+            )}
+
             <About />
          </div>
       );
